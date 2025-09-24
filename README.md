@@ -134,10 +134,10 @@ TARGET=LOCAL npx playwright test -g "@tc2"
 
 ## Test cases implemented
 
-## TC1: validation of console errors on Home and About pages
+### TC1: validation of console errors on Home and About pages
 
-## TC2: validation of all links of the home page returns 200/30x status codes
+### TC2: validation of all links of the home page returns 200/30x status codes
 
-## TC3: User Login with valid credentials
+### TC3: User Login with valid credentials
 
-## TC4: Get all appwrite open pr's via github api and create csv file in fixter/openPrs directory
+### TC4: Get all appwrite open pr's via github api and create csv file in fixter/openPrs directory
