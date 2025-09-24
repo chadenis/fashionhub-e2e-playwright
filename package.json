@@ -1,0 +1,27 @@
+{
+  "name": "fashionhub-e2e-playwright",
+  "version": "1.0.0",
+  "description": "code challenge for luxexperience",
+  "main": "index.js",
+  "scripts": {
+    "docker:clean": "docker rm -f fashionhub-app 2>/dev/null || true",
+    "docker:start": "npm run docker:clean && docker run -d --rm --name fashionhub-app -p 4000:4000 pocketaces2/fashionhub-demo-app:latest",
+    "docker:stop": "docker stop fashionhub-app || true",
+    "test:local": "npm run docker:start && TARGET=LOCAL playwright test && npm run docker:stop",
+    "test:staging": "TARGET=STAGING playwright test",
+    "test:prod": "TARGET=PROD playwright test",
+    "test:local:ui": "npm run docker:start && TARGET=LOCAL playwright test --ui && npm run docker:stop",
+    "test:staging:ui": "TARGET=STAGING playwright test --ui",
+    "test:prod:ui": "TARGET=PROD playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
+  }
+}

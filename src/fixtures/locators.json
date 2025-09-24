@@ -1,0 +1,11 @@
+{
+  "login": {
+    "username": "#username",
+    "password": "#password",
+    "submit": "input[type='submit']"
+  },
+  "account": {
+    "welcome": ".account-page h2",
+    "logoutButton": ".account-page logout-button"
+  }
+}
